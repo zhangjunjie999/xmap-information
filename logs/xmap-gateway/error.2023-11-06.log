@@ -1,0 +1,3 @@
+09:51:22.982 [boundedElastic-9] ERROR c.x.g.h.GatewayExceptionHandler - [handle,52] - [网关异常处理]请求路径:/schedule/job/list,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for xmap-job"
+09:54:06.236 [boundedElastic-11] ERROR c.x.g.h.GatewayExceptionHandler - [handle,52] - [网关异常处理]请求路径:/schedule/job/list,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for xmap-job"
+09:59:00.104 [boundedElastic-4] ERROR c.x.g.h.GatewayExceptionHandler - [handle,52] - [网关异常处理]请求路径:/schedule/job/list,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for xmap-job"

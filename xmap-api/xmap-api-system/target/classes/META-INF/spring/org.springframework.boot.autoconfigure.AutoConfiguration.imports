@@ -1,0 +1,3 @@
+com.xmap.system.api.factory.RemoteUserFallbackFactory
+com.xmap.system.api.factory.RemoteLogFallbackFactory
+com.xmap.system.api.factory.RemoteFileFallbackFactory

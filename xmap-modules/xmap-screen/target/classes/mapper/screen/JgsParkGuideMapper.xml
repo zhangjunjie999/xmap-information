@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.screen.mapper.JgsParkGuideMapper">
+
+    <resultMap type="JgsParkGuide" id="JgsParkGuideResult">
+        <result property="id"    column="id"    />
+        <result property="siteName"    column="site_name"    />
+        <result property="notice"    column="notice"    />
+        <result property="weather"    column="weather"    />
+        <result property="icon"    column="icon"    />
+        <result property="distance"    column="distance"    />
+        <result property="location"    column="location"    />
+        <result property="availablePark"    column="available_park"    />
+        <result property="occupiedPark"    column="occupied_park"    />
+        <result property="nearbyPark"    column="nearby_park"    />
+        <result property="availableSpace"    column="available_space"    />
+        <result property="emergencyPhone"    column="emergency_phone"    />
+        <result property="verifyStatus"    column="verify_status"    />
+    </resultMap>
+
+    <sql id="selectJgsParkGuideVo">
+        select id, site_name, notice, weather, icon, distance, location, available_park, occupied_park, nearby_park, available_space, emergency_phone, verify_status from jgs_park_guide
+    </sql>
+
+    <select id="selectJgsParkGuideList" parameterType="JgsParkGuide" resultMap="JgsParkGuideResult">
+        <include refid="selectJgsParkGuideVo"/>
+        <where>
+            <if test="siteName != null  and siteName != ''"> and site_name like concat('%', #{siteName}, '%')</if>
+            <if test="notice != null  and notice != ''"> and notice = #{notice}</if>
+            <if test="weather != null  and weather != ''"> and weather = #{weather}</if>
+            <if test="icon != null  and icon != ''"> and icon = #{icon}</if>
+            <if test="distance != null "> and distance = #{distance}</if>
+            <if test="location != null  and location != ''"> and location = #{location}</if>
+            <if test="availablePark != null "> and available_park = #{availablePark}</if>
+            <if test="occupiedPark != null "> and occupied_park = #{occupiedPark}</if>
+            <if test="nearbyPark != null  and nearbyPark != ''"> and nearby_park = #{nearbyPark}</if>
+            <if test="availableSpace != null "> and available_space = #{availableSpace}</if>
+            <if test="emergencyPhone != null  and emergencyPhone != ''"> and emergency_phone = #{emergencyPhone}</if>
+            <if test="verifyStatus != null  and verifyStatus != ''"> and verify_status = #{verifyStatus}</if>
+        </where>
+    </select>
+
+    <select id="selectJgsParkGuideById" parameterType="Long" resultMap="JgsParkGuideResult">
+        <include refid="selectJgsParkGuideVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertJgsParkGuide" parameterType="JgsParkGuide" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_park_guide
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="siteName != null">site_name,</if>
+            <if test="notice != null">notice,</if>
+            <if test="weather != null">weather,</if>
+            <if test="icon != null">icon,</if>
+            <if test="distance != null">distance,</if>
+            <if test="location != null">location,</if>
+            <if test="availablePark != null">available_park,</if>
+            <if test="occupiedPark != null">occupied_park,</if>
+            <if test="nearbyPark != null">nearby_park,</if>
+            <if test="availableSpace != null">available_space,</if>
+            <if test="emergencyPhone != null">emergency_phone,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="siteName != null">#{siteName},</if>
+            <if test="notice != null">#{notice},</if>
+            <if test="weather != null">#{weather},</if>
+            <if test="icon != null">#{icon},</if>
+            <if test="distance != null">#{distance},</if>
+            <if test="location != null">#{location},</if>
+            <if test="availablePark != null">#{availablePark},</if>
+            <if test="occupiedPark != null">#{occupiedPark},</if>
+            <if test="nearbyPark != null">#{nearbyPark},</if>
+            <if test="availableSpace != null">#{availableSpace},</if>
+            <if test="emergencyPhone != null">#{emergencyPhone},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsParkGuide" parameterType="JgsParkGuide">
+        update jgs_park_guide
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="siteName != null">site_name = #{siteName},</if>
+            <if test="notice != null">notice = #{notice},</if>
+            <if test="weather != null">weather = #{weather},</if>
+            <if test="icon != null">icon = #{icon},</if>
+            <if test="distance != null">distance = #{distance},</if>
+            <if test="location != null">location = #{location},</if>
+            <if test="availablePark != null">available_park = #{availablePark},</if>
+            <if test="occupiedPark != null">occupied_park = #{occupiedPark},</if>
+            <if test="nearbyPark != null">nearby_park = #{nearbyPark},</if>
+            <if test="availableSpace != null">available_space = #{availableSpace},</if>
+            <if test="emergencyPhone != null">emergency_phone = #{emergencyPhone},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsParkGuideById" parameterType="Long">
+        delete from jgs_park_guide where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsParkGuideByIds" parameterType="String">
+        delete from jgs_park_guide where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

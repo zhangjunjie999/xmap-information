@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsBoardMapper">
+    
+    <resultMap type="JgsBoard" id="JgsBoardResult">
+        <result property="id"    column="id"    />
+        <result property="title"    column="title"    />
+        <result property="content"    column="content"    />
+        <result property="publishTime"    column="publish_time"    />
+        <result property="status"    column="status"    />
+    </resultMap>
+
+    <sql id="selectJgsBoardVo">
+        select id, title, content, publish_time, status from jgs_board_list
+    </sql>
+
+    <select id="selectJgsBoardList" parameterType="JgsBoard" resultMap="JgsBoardResult">
+        <include refid="selectJgsBoardVo"/>
+        <where>  
+            <if test="title != null  and title != ''"> and title = #{title}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="publishTime != null "> and publish_time = #{publishTime}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsBoardById" parameterType="Long" resultMap="JgsBoardResult">
+        <include refid="selectJgsBoardVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsBoard" parameterType="JgsBoard">
+        insert into jgs_board_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="title != null">title,</if>
+            <if test="content != null">content,</if>
+            <if test="publishTime != null">publish_time,</if>
+            <if test="status != null">status,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="title != null">#{title},</if>
+            <if test="content != null">#{content},</if>
+            <if test="publishTime != null">#{publishTime},</if>
+            <if test="status != null">#{status},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsBoard" parameterType="JgsBoard">
+        update jgs_board_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null">title = #{title},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="publishTime != null">publish_time = #{publishTime},</if>
+            <if test="status != null">status = #{status},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsBoardById" parameterType="Long">
+        delete from jgs_board_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsBoardByIds" parameterType="String">
+        delete from jgs_board_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

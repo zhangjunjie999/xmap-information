@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsImageMapper">
+    
+    <resultMap type="JgsImage" id="JgsImageResult">
+        <result property="id"    column="id"    />
+        <result property="title"    column="title"    />
+        <result property="name"    column="name"    />
+        <result property="image"    column="image"    />
+        <result property="status"    column="status"    />
+        <result property="addTime"    column="add_time"    />
+        <result property="changeTime"    column="change_time"    />
+    </resultMap>
+
+    <sql id="selectJgsImageVo">
+        select id, title, name, image, status, add_time, change_time from jgs_image_list
+    </sql>
+
+    <select id="selectJgsImageList" parameterType="JgsImage" resultMap="JgsImageResult">
+        <include refid="selectJgsImageVo"/>
+        <where>  
+            <if test="title != null  and title != ''"> and title like concat('%', #{title}, '%')</if>
+            <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
+            <if test="image != null  and image != ''"> and image = #{image}</if>
+            <if test="status != null  and status != ''"> and status like concat('%', #{status}, '%')</if>
+            <if test="addTime != null "> and add_time = #{addTime}</if>
+            <if test="changeTime != null "> and change_time = #{changeTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsImageById" parameterType="Long" resultMap="JgsImageResult">
+        <include refid="selectJgsImageVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsImage" parameterType="JgsImage">
+        insert into jgs_image_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="title != null">title,</if>
+            <if test="name != null">name,</if>
+            <if test="image != null">image,</if>
+            <if test="status != null">status,</if>
+            <if test="addTime != null">add_time,</if>
+            <if test="changeTime != null">change_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="title != null">#{title},</if>
+            <if test="name != null">#{name},</if>
+            <if test="image != null">#{image},</if>
+            <if test="status != null">#{status},</if>
+            <if test="addTime != null">#{addTime},</if>
+            <if test="changeTime != null">#{changeTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsImage" parameterType="JgsImage">
+        update jgs_image_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null">title = #{title},</if>
+            <if test="name != null">name = #{name},</if>
+            <if test="image != null">image = #{image},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="addTime != null">add_time = #{addTime},</if>
+            <if test="changeTime != null">change_time = #{changeTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsImageById" parameterType="Long">
+        delete from jgs_image_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsImageByIds" parameterType="String">
+        delete from jgs_image_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

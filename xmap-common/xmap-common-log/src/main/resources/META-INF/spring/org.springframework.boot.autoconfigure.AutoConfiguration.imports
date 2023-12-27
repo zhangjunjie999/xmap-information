@@ -1,0 +1,2 @@
+com.xmap.common.log.service.AsyncLogService
+com.xmap.common.log.aspect.LogAspect

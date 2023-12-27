@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.screen.mapper.ScreenHistoryMapper">
+    
+    <resultMap type="ScreenHistory" id="ScreenHistoryResult">
+        <result property="historyId"    column="history_id"    />
+        <result property="historyName"    column="history_name"    />
+        <result property="historyIp"    column="history_ip"    />
+        <result property="historyPort"    column="history_port"    />
+        <result property="historyApi"    column="history_api"    />
+        <result property="createDate"    column="create_date"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="historyStatus"    column="history_status"    />
+        <result property="historyResponse"    column="history_response"    />
+        <result property="fieldType"    column="field_type"    />
+        <result property="fieldValues"    column="field_values"    />
+        <result property="operatorType"    column="operator_type"    />
+        <result property="businessData"    column="business_data"    />
+    </resultMap>
+
+    <sql id="selectScreenHistoryVo">
+        select history_id, history_name, history_ip, history_port, history_api, create_date, create_by, history_status, history_response, field_type, field_values, operator_type, business_data from screen_history
+    </sql>
+
+    <select id="selectScreenHistoryList" parameterType="ScreenHistory" resultMap="ScreenHistoryResult">
+        <include refid="selectScreenHistoryVo"/>
+        <where>  
+            <if test="historyName != null  and historyName != ''"> and history_name like concat('%', #{historyName}, '%')</if>
+            <if test="historyIp != null  and historyIp != ''"> and history_ip = #{historyIp}</if>
+            <if test="historyPort != null  and historyPort != ''"> and history_port = #{historyPort}</if>
+            <if test="historyApi != null  and historyApi != ''"> and history_api = #{historyApi}</if>
+            <if test="createDate != null "> and create_date = #{createDate}</if>
+
+            <if test="historyStatus != null  and historyStatus != ''"> and history_status = #{historyStatus}</if>
+            <if test="historyResponse != null  and historyResponse != ''"> and history_response = #{historyResponse}</if>
+            <if test="fieldType != null  and fieldType != ''"> and field_type = #{fieldType}</if>
+            <if test="fieldValues != null  and fieldValues != ''"> and field_values = #{fieldValues}</if>
+            <if test="operatorType != null  and operatorType != ''"> and operator_type = #{operatorType}</if>
+            <if test="businessData != null  and businessData != ''"> and business_data = #{businessData}</if>
+        </where>
+    </select>
+    
+    <select id="selectScreenHistoryByHistoryId" parameterType="Long" resultMap="ScreenHistoryResult">
+        <include refid="selectScreenHistoryVo"/>
+        where history_id = #{historyId}
+    </select>
+        
+    <insert id="insertScreenHistory" parameterType="ScreenHistory" useGeneratedKeys="true" keyProperty="historyId">
+        insert into screen_history
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="historyName != null">history_name,</if>
+            <if test="historyIp != null">history_ip,</if>
+            <if test="historyPort != null">history_port,</if>
+            <if test="historyApi != null">history_api,</if>
+            <if test="createDate != null">create_date,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="historyStatus != null">history_status,</if>
+            <if test="historyResponse != null">history_response,</if>
+            <if test="fieldType != null">field_type,</if>
+            <if test="fieldValues != null">field_values,</if>
+            <if test="operatorType != null">operator_type,</if>
+            <if test="businessData != null">business_data,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="historyName != null">#{historyName},</if>
+            <if test="historyIp != null">#{historyIp},</if>
+            <if test="historyPort != null">#{historyPort},</if>
+            <if test="historyApi != null">#{historyApi},</if>
+            <if test="createDate != null">#{createDate},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="historyStatus != null">#{historyStatus},</if>
+            <if test="historyResponse != null">#{historyResponse},</if>
+            <if test="fieldType != null">#{fieldType},</if>
+            <if test="fieldValues != null">#{fieldValues},</if>
+            <if test="operatorType != null">#{operatorType},</if>
+            <if test="businessData != null">#{businessData},</if>
+         </trim>
+    </insert>
+
+    <update id="updateScreenHistory" parameterType="ScreenHistory">
+        update screen_history
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="historyName != null">history_name = #{historyName},</if>
+            <if test="historyIp != null">history_ip = #{historyIp},</if>
+            <if test="historyPort != null">history_port = #{historyPort},</if>
+            <if test="historyApi != null">history_api = #{historyApi},</if>
+            <if test="createDate != null">create_date = #{createDate},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="historyStatus != null">history_status = #{historyStatus},</if>
+            <if test="historyResponse != null">history_response = #{historyResponse},</if>
+            <if test="fieldType != null">field_type = #{fieldType},</if>
+            <if test="fieldValues != null">field_values = #{fieldValues},</if>
+            <if test="operatorType != null">operator_type = #{operatorType},</if>
+            <if test="businessData != null">business_data = #{businessData},</if>
+        </trim>
+        where history_id = #{historyId}
+    </update>
+
+    <delete id="deleteScreenHistoryByHistoryId" parameterType="Long">
+        delete from screen_history where history_id = #{historyId}
+    </delete>
+
+    <delete id="deleteScreenHistoryByHistoryIds" parameterType="String">
+        delete from screen_history where history_id in 
+        <foreach item="historyId" collection="array" open="(" separator="," close=")">
+            #{historyId}
+        </foreach>
+    </delete>
+</mapper>

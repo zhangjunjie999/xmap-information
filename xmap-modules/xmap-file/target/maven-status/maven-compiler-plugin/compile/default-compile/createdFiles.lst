@@ -1,0 +1,9 @@
+com\xmap\file\config\ResourcesConfig.class
+com\xmap\file\service\FastDfsSysFileServiceImpl.class
+com\xmap\file\XmapFileApplication.class
+com\xmap\file\utils\FileUploadUtils.class
+com\xmap\file\config\MinioConfig.class
+com\xmap\file\controller\SysFileController.class
+com\xmap\file\service\MinioSysFileServiceImpl.class
+com\xmap\file\service\ISysFileService.class
+com\xmap\file\service\LocalSysFileServiceImpl.class

@@ -1,0 +1,7 @@
+com\xmap\auth\form\RegisterBody.class
+com\xmap\auth\XmapAuthApplication.class
+com\xmap\auth\controller\TokenController.class
+com\xmap\auth\service\SysRecordLogService.class
+com\xmap\auth\form\LoginBody.class
+com\xmap\auth\service\SysLoginService.class
+com\xmap\auth\service\SysPasswordService.class

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsAnalyMapper">
+    
+    <resultMap type="JgsAnaly" id="JgsAnalyResult">
+        <result property="statisticsId"    column="Statistics_ID"    />
+        <result property="visitorCount"    column="Visitor_Count"    />
+        <result property="ticketSales"    column="Ticket_Sales"    />
+        <result property="attractionStatistics"    column="Attraction__Statistics"    />
+        <result property="employeeManage"    column="Employee_Manage"    />
+        <result property="statisticsTime"    column="Statistics_Time"    />
+    </resultMap>
+
+    <sql id="selectJgsAnalyVo">
+        select Statistics_ID, Visitor_Count, Ticket_Sales, Attraction__Statistics, Employee_Manage, Statistics_Time from jgs_analy_list
+    </sql>
+
+    <select id="selectJgsAnalyList" parameterType="JgsAnaly" resultMap="JgsAnalyResult">
+        <include refid="selectJgsAnalyVo"/>
+        <where>  
+            <if test="visitorCount != null  and visitorCount != ''"> and Visitor_Count = #{visitorCount}</if>
+            <if test="ticketSales != null  and ticketSales != ''"> and Ticket_Sales = #{ticketSales}</if>
+            <if test="attractionStatistics != null "> and Attraction__Statistics = #{attractionStatistics}</if>
+            <if test="employeeManage != null  and employeeManage != ''"> and Employee_Manage = #{employeeManage}</if>
+            <if test="statisticsTime != null  and statisticsTime != ''"> and Statistics_Time = #{statisticsTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsAnalyByStatisticsId" parameterType="Long" resultMap="JgsAnalyResult">
+        <include refid="selectJgsAnalyVo"/>
+        where Statistics_ID = #{statisticsId}
+    </select>
+        
+    <insert id="insertJgsAnaly" parameterType="JgsAnaly" useGeneratedKeys="true" keyProperty="statisticsId">
+        insert into jgs_analy_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="visitorCount != null">Visitor_Count,</if>
+            <if test="ticketSales != null">Ticket_Sales,</if>
+            <if test="attractionStatistics != null">Attraction__Statistics,</if>
+            <if test="employeeManage != null">Employee_Manage,</if>
+            <if test="statisticsTime != null">Statistics_Time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="visitorCount != null">#{visitorCount},</if>
+            <if test="ticketSales != null">#{ticketSales},</if>
+            <if test="attractionStatistics != null">#{attractionStatistics},</if>
+            <if test="employeeManage != null">#{employeeManage},</if>
+            <if test="statisticsTime != null">#{statisticsTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsAnaly" parameterType="JgsAnaly">
+        update jgs_analy_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="visitorCount != null">Visitor_Count = #{visitorCount},</if>
+            <if test="ticketSales != null">Ticket_Sales = #{ticketSales},</if>
+            <if test="attractionStatistics != null">Attraction__Statistics = #{attractionStatistics},</if>
+            <if test="employeeManage != null">Employee_Manage = #{employeeManage},</if>
+            <if test="statisticsTime != null">Statistics_Time = #{statisticsTime},</if>
+        </trim>
+        where Statistics_ID = #{statisticsId}
+    </update>
+
+    <delete id="deleteJgsAnalyByStatisticsId" parameterType="Long">
+        delete from jgs_analy_list where Statistics_ID = #{statisticsId}
+    </delete>
+
+    <delete id="deleteJgsAnalyByStatisticsIds" parameterType="String">
+        delete from jgs_analy_list where Statistics_ID in 
+        <foreach item="statisticsId" collection="array" open="(" separator="," close=")">
+            #{statisticsId}
+        </foreach>
+    </delete>
+</mapper>

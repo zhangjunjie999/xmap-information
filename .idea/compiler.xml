@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xmap-common-redis" />
+        <module name="xmap-gateway" />
+        <module name="xmap-api-system" />
+        <module name="xmap-modules-file" />
+        <module name="xmap-modules-gen" />
+        <module name="xmap-modules-system" />
+        <module name="xmap-auth" />
+        <module name="xmap-common-log" />
+        <module name="xmap-common-datascope" />
+        <module name="xmap-modules-job" />
+        <module name="xmap-modules-information" />
+        <module name="xmap-common-seata" />
+        <module name="xmap-common-datasource" />
+        <module name="xmap-common-core" />
+        <module name="xmap-common-swagger" />
+        <module name="xmap-common-security" />
+        <module name="xmap-monitor" />
+        <module name="xmap-modules-screen" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

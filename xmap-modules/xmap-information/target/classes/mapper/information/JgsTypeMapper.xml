@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsTypeMapper">
+
+    <resultMap type="JgsType" id="JgsTypeResult">
+        <result property="id"    column="id"    />
+        <result property="typeName"    column="type_name"    />
+        <result property="description"    column="description"    />
+        <result property="logo"    column="logo"    />
+        <result property="viewCounts"    column="view_counts"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="status"    column="status"    />
+    </resultMap>
+
+    <sql id="selectJgsTypeVo">
+        select id, type_name, description, logo, view_counts, create_time, status from jgs_parktype_list
+    </sql>
+
+    <select id="selectJgsTypeList" parameterType="JgsType" resultMap="JgsTypeResult">
+        <include refid="selectJgsTypeVo"/>
+        <where>
+            <if test="typeName != null  and typeName != ''"> and type_name like concat('%', #{typeName}, '%')</if>
+            <if test="description != null  and description != ''"> and description = #{description}</if>
+            <if test="logo != null  and logo != ''"> and logo = #{logo}</if>
+            <if test="viewCounts != null "> and view_counts = #{viewCounts}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+
+    <select id="selectJgsTypeById" parameterType="Long" resultMap="JgsTypeResult">
+        <include refid="selectJgsTypeVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertJgsType" parameterType="JgsType" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_parktype_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="typeName != null">type_name,</if>
+            <if test="description != null">description,</if>
+            <if test="logo != null">logo,</if>
+            <if test="viewCounts != null">view_counts,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="status != null">status,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="typeName != null">#{typeName},</if>
+            <if test="description != null">#{description},</if>
+            <if test="logo != null">#{logo},</if>
+            <if test="viewCounts != null">#{viewCounts},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="status != null">#{status},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsType" parameterType="JgsType">
+        update jgs_parktype_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="typeName != null">type_name = #{typeName},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="logo != null">logo = #{logo},</if>
+            <if test="viewCounts != null">view_counts = #{viewCounts},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="status != null">status = #{status},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsTypeById" parameterType="Long">
+        delete from jgs_parktype_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsTypeByIds" parameterType="String">
+        delete from jgs_parktype_list where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

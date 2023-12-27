@@ -1,0 +1,4 @@
+10:47:49.428 [boundedElastic-66] ERROR c.x.g.h.GatewayExceptionHandler - [handle,52] - [网关异常处理]请求路径:/code/gen/list,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for xmap-gen"
+14:48:32.865 [reactor-http-nio-5] ERROR c.x.g.h.GatewayExceptionHandler - [handle,52] - [网关异常处理]请求路径:/information/view/list,异常信息:No route to host: no further information: /10.100.60.135:9211
+14:48:33.144 [reactor-http-nio-6] ERROR c.x.g.h.GatewayExceptionHandler - [handle,52] - [网关异常处理]请求路径:/information/site/list,异常信息:No route to host: no further information: /10.100.60.135:9211
+14:48:33.147 [reactor-http-nio-8] ERROR c.x.g.h.GatewayExceptionHandler - [handle,52] - [网关异常处理]请求路径:/system/user/profile,异常信息:No route to host: no further information: /10.100.60.135:9201

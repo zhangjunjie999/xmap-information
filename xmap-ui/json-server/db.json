@@ -1,0 +1,924 @@
+{
+  "refreshMaterialContent": [
+    {
+      "id": 1,
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "806"
+      ],
+      "operatorType": "",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "43",
+          "resourceType": "document",
+          "resourceList": [
+            {
+              "resourceValue": "第一个test字符串",
+              "playTime": 20,
+              "materialNo": 1
+            },
+            {
+              "resourceValue": "第二个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 2
+            },
+            {
+              "resourceValue": "第san个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "44",
+          "resourceType": "picture",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=74c093f30faa47038ec9e750cdd7237f",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=d9da1c6da6634aa7aa122115ba5c9e63",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=f81f2db369ee4c36a4dec0e25e5fccbd",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "45",
+          "resourceType": "web",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.xunlei.com",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.hikvision.com/cn/",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.baidu.com",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "46",
+          "resourceType": "RTSP",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik1234567@10.196.76.80:554/h264/ch1/main/av_stream",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.33:554/h264/ch1/main/av_stream",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.196:554/h264/ch1/main/av_stream",
+              "materialNo": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "915"
+      ],
+      "operatorType": "",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "40",
+          "resourceType": "document",
+          "resourceList": [
+            {
+              "resourceValue": "第一个test字符串",
+              "playTime": 20,
+              "materialNo": 1
+            },
+            {
+              "resourceValue": "第二个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 2
+            },
+            {
+              "resourceValue": "第san个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "44",
+          "resourceType": "picture",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=74c093f30faa47038ec9e750cdd7237f",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=d9da1c6da6634aa7aa122115ba5c9e63",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=f81f2db369ee4c36a4dec0e25e5fccbd",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "45",
+          "resourceType": "web",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.xunlei.com",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.hikvision.com/cn/",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.baidu.com",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "46",
+          "resourceType": "RTSP",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik1234567@10.196.76.80:554/h264/ch1/main/av_stream",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.33:554/h264/ch1/main/av_stream",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.196:554/h264/ch1/main/av_stream",
+              "materialNo": 3
+            }
+          ]
+        }
+      ],
+      "id": 2
+    },
+    {
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "40",
+          "resourceList": [
+            {
+              "materialNo": 1,
+              "playTime": 20,
+              "resourceValue": "第一个test字符串"
+            },
+            {
+              "materialNo": 2,
+              "playTime": 20,
+              "resourceValue": "第二个测试文字字符串"
+            },
+            {
+              "materialNo": 3,
+              "playTime": 20,
+              "resourceValue": "第san个测试文字字符串"
+            }
+          ],
+          "resourceType": "document"
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "44",
+          "resourceList": [
+            {
+              "materialNo": 1,
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=74c093f30faa47038ec9e750cdd7237f"
+            },
+            {
+              "materialNo": 2,
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=d9da1c6da6634aa7aa122115ba5c9e63"
+            },
+            {
+              "materialNo": 3,
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=f81f2db369ee4c36a4dec0e25e5fccbd"
+            }
+          ],
+          "resourceType": "picture"
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "45",
+          "resourceList": [
+            {
+              "materialNo": 1,
+              "playTime": 20,
+              "resourceValue": "https://www.xunlei.com"
+            },
+            {
+              "materialNo": 2,
+              "playTime": 20,
+              "resourceValue": "https://www.hikvision.com/cn/"
+            },
+            {
+              "materialNo": 3,
+              "playTime": 20,
+              "resourceValue": "https://www.baidu.com"
+            }
+          ],
+          "resourceType": "web"
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "46",
+          "resourceList": [
+            {
+              "materialNo": 1,
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik1234567@10.196.76.80:554/h264/ch1/main/av_stream"
+            },
+            {
+              "materialNo": 2,
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.33:554/h264/ch1/main/av_stream"
+            },
+            {
+              "materialNo": 3,
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.196:554/h264/ch1/main/av_stream"
+            }
+          ],
+          "resourceType": "RTSP"
+        }
+      ],
+      "operatorType": "",
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "830"
+      ],
+      "id": 3
+    },
+    {
+      "businessData": [],
+      "operatorType": "",
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "123"
+      ],
+      "id": 4
+    },
+    {
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "915"
+      ],
+      "operatorType": "",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "40",
+          "resourceType": "document",
+          "resourceList": [
+            {
+              "resourceValue": "第一个test字符串",
+              "playTime": 20,
+              "materialNo": 1
+            },
+            {
+              "resourceValue": "第二个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 2
+            },
+            {
+              "resourceValue": "第san个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "44",
+          "resourceType": "picture",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=74c093f30faa47038ec9e750cdd7237f",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=d9da1c6da6634aa7aa122115ba5c9e63",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=f81f2db369ee4c36a4dec0e25e5fccbd",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "45",
+          "resourceType": "web",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.xunlei.com",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.hikvision.com/cn/",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.baidu.com",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "46",
+          "resourceType": "RTSP",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik1234567@10.196.76.80:554/h264/ch1/main/av_stream",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.33:554/h264/ch1/main/av_stream",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.196:554/h264/ch1/main/av_stream",
+              "materialNo": 3
+            }
+          ]
+        }
+      ],
+      "id": 5
+    },
+    {
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "915"
+      ],
+      "operatorType": "",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "40",
+          "resourceType": "document",
+          "resourceList": [
+            {
+              "resourceValue": "第一个test字符串",
+              "playTime": 20,
+              "materialNo": 1
+            },
+            {
+              "resourceValue": "第二个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 2
+            },
+            {
+              "resourceValue": "第san个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "44",
+          "resourceType": "picture",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=74c093f30faa47038ec9e750cdd7237f",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=d9da1c6da6634aa7aa122115ba5c9e63",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=f81f2db369ee4c36a4dec0e25e5fccbd",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "45",
+          "resourceType": "web",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.xunlei.com",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.hikvision.com/cn/",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.baidu.com",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "46",
+          "resourceType": "RTSP",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik1234567@10.196.76.80:554/h264/ch1/main/av_stream",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.33:554/h264/ch1/main/av_stream",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.196:554/h264/ch1/main/av_stream",
+              "materialNo": 3
+            }
+          ]
+        }
+      ],
+      "id": 6
+    },
+    {
+      "businessData": [],
+      "operatorType": "",
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "123"
+      ],
+      "id": 7
+    },
+    {
+      "businessData": [],
+      "operatorType": "",
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "123"
+      ],
+      "id": 8
+    },
+    {
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "915"
+      ],
+      "operatorType": "",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "40",
+          "resourceType": "document",
+          "resourceList": [
+            {
+              "resourceValue": "第一个test字符串",
+              "playTime": 20,
+              "materialNo": 1
+            },
+            {
+              "resourceValue": "第二个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 2
+            },
+            {
+              "resourceValue": "第san个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "44",
+          "resourceType": "picture",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=74c093f30faa47038ec9e750cdd7237f",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=d9da1c6da6634aa7aa122115ba5c9e63",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=f81f2db369ee4c36a4dec0e25e5fccbd",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "45",
+          "resourceType": "web",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.xunlei.com",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.hikvision.com/cn/",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.baidu.com",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "46",
+          "resourceType": "RTSP",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik1234567@10.196.76.80:554/h264/ch1/main/av_stream",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.33:554/h264/ch1/main/av_stream",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.196:554/h264/ch1/main/av_stream",
+              "materialNo": 3
+            }
+          ]
+        }
+      ],
+      "id": 9
+    },
+    {
+      "terminalUniqueFieldType": "idType",
+      "terminalUniqueFieldValues": [
+        "917"
+      ],
+      "operatorType": "",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "40",
+          "resourceType": "document",
+          "resourceList": [
+            {
+              "resourceValue": "第一个test字符串",
+              "playTime": 20,
+              "materialNo": 1
+            },
+            {
+              "resourceValue": "第二个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 2
+            },
+            {
+              "resourceValue": "第san个测试文字字符串",
+              "playTime": 20,
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "44",
+          "resourceType": "picture",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=74c093f30faa47038ec9e750cdd7237f",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=d9da1c6da6634aa7aa122115ba5c9e63",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=f81f2db369ee4c36a4dec0e25e5fccbd",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "45",
+          "resourceType": "web",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.xunlei.com",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.hikvision.com/cn/",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "https://www.baidu.com",
+              "materialNo": 3
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "46",
+          "resourceType": "RTSP",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik1234567@10.196.76.80:554/h264/ch1/main/av_stream",
+              "materialNo": 1
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.33:554/h264/ch1/main/av_stream",
+              "materialNo": 2
+            },
+            {
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.196:554/h264/ch1/main/av_stream",
+              "materialNo": 3
+            }
+          ]
+        }
+      ],
+      "id": 10
+    },
+    {
+      "terminalUniqueFieldType": "idType",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "40",
+          "resourceType": "document",
+          "resourceList": [
+            {
+              "materialNo": 1,
+              "playTime": 20,
+              "resourceValue": "第一个test字符串"
+            },
+            {
+              "materialNo": 2,
+              "playTime": 20,
+              "resourceValue": "第二个测试文字字符串"
+            },
+            {
+              "materialNo": 3,
+              "playTime": 20,
+              "resourceValue": "第san个测试文字字符串"
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "44",
+          "resourceType": "picture",
+          "resourceList": [
+            {
+              "materialNo": 1,
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=74c093f30faa47038ec9e750cdd7237f"
+            },
+            {
+              "materialNo": 2,
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=d9da1c6da6634aa7aa122115ba5c9e63"
+            },
+            {
+              "materialNo": 3,
+              "playTime": 20,
+              "resourceValue": "http://10.120.9.144:8989/kms/services/rest/dataInfoService/downloadFile?id=f81f2db369ee4c36a4dec0e25e5fccbd"
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "45",
+          "resourceType": "web",
+          "resourceList": [
+            {
+              "materialNo": 1,
+              "playTime": 20,
+              "resourceValue": "https://www.xunlei.com"
+            },
+            {
+              "materialNo": 2,
+              "playTime": 20,
+              "resourceValue": "https://www.hikvision.com/cn/"
+            },
+            {
+              "materialNo": 3,
+              "playTime": 20,
+              "resourceValue": "https://www.baidu.com"
+            }
+          ]
+        },
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "46",
+          "resourceType": "RTSP",
+          "resourceList": [
+            {
+              "materialNo": 1,
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik1234567@10.196.76.80:554/h264/ch1/main/av_stream"
+            },
+            {
+              "materialNo": 2,
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.33:554/h264/ch1/main/av_stream"
+            },
+            {
+              "materialNo": 3,
+              "playTime": 20,
+              "resourceValue": "rtsp://admin:Hik12345@10.196.76.196:554/h264/ch1/main/av_stream"
+            }
+          ]
+        }
+      ],
+      "terminalUniqueFieldValues": [
+        "919"
+      ],
+      "operatorType": "",
+      "id": 12
+    },
+    {
+      "terminalUniqueFieldType": "idType",
+      "businessData": [],
+      "terminalUniqueFieldValues": [
+        "101"
+      ],
+      "id": 13
+    },
+    {
+      "terminalUniqueFieldType": "idType",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "12",
+          "resourceList": [
+            {
+              "playTime": 20,
+              "resourceValue": "http://localhost:8080/information/parking/huizhan"
+            }
+          ],
+          "resourceType": "web"
+        }
+      ],
+      "terminalUniqueFieldValues": [
+        "32"
+      ],
+      "id": 14
+    },
+    {
+      "terminalUniqueFieldType": "",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "12",
+          "resourceList": [
+            {
+              "resourceValue": "http://localhost:8080/information/parking/parkhuizhan"
+            }
+          ],
+          "resourceType": "web"
+        }
+      ],
+      "terminalUniqueFieldValues": [
+        ""
+      ],
+      "operatorType": "",
+      "id": 15
+    },
+    {
+      "terminalUniqueFieldType": "",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "12",
+          "resourceList": [
+            {
+              "resourceValue": "http://192.168.33.100/information/parking/parkhuizhan"
+            }
+          ],
+          "resourceType": "web"
+        }
+      ],
+      "terminalUniqueFieldValues": [
+        null
+      ],
+      "operatorType": "",
+      "id": 16
+    },
+    {
+      "terminalUniqueFieldType": "",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "12",
+          "resourceList": [
+            {
+              "resourceValue": "http://localhost:8080/information/parking/parkhuizhan"
+            }
+          ],
+          "resourceType": "web"
+        }
+      ],
+      "terminalUniqueFieldValues": [
+        null
+      ],
+      "operatorType": "",
+      "id": 17
+    },
+    {
+      "terminalUniqueFieldType": "idType",
+      "businessData": [
+        {
+          "materialUniqueFieldType": "idType",
+          "materialUniqueFieldValue": "11",
+          "resourceList": [
+            {
+              "playTime": -1,
+              "resourceValue": "http://192.168.33.100:8080/information/parking/parkhuizhan"
+            }
+          ],
+          "resourceType": "web"
+        }
+      ],
+      "terminalUniqueFieldValues": [
+        "121"
+      ],
+      "operatorType": "",
+      "id": 18
+    }
+  ]
+}

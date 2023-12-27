@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsScreenMapper">
+    
+    <resultMap type="JgsScreen" id="JgsScreenResult">
+        <result property="id"    column="id"    />
+        <result property="screenName"    column="screen_name"    />
+        <result property="screenSize"    column="screen_size"    />
+        <result property="screenDescreption"    column="screen_descreption"    />
+        <result property="screenSource"    column="screen_source"    />
+        <result property="status"    column="status"    />
+    </resultMap>
+
+    <sql id="selectJgsScreenVo">
+        select id, screen_name, screen_size, screen_descreption, screen_source, status from jgs_screen_list
+    </sql>
+
+    <select id="selectJgsScreenList" parameterType="JgsScreen" resultMap="JgsScreenResult">
+        <include refid="selectJgsScreenVo"/>
+        <where>  
+            <if test="screenName != null  and screenName != ''"> and screen_name like concat('%', #{screenName}, '%')</if>
+            <if test="screenSize != null  and screenSize != ''"> and screen_size = #{screenSize}</if>
+            <if test="screenDescreption != null  and screenDescreption != ''"> and screen_descreption = #{screenDescreption}</if>
+            <if test="screenSource != null  and screenSource != ''"> and screen_source = #{screenSource}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsScreenById" parameterType="Long" resultMap="JgsScreenResult">
+        <include refid="selectJgsScreenVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsScreen" parameterType="JgsScreen" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_screen_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="screenName != null">screen_name,</if>
+            <if test="screenSize != null">screen_size,</if>
+            <if test="screenDescreption != null">screen_descreption,</if>
+            <if test="screenSource != null">screen_source,</if>
+            <if test="status != null">status,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="screenName != null">#{screenName},</if>
+            <if test="screenSize != null">#{screenSize},</if>
+            <if test="screenDescreption != null">#{screenDescreption},</if>
+            <if test="screenSource != null">#{screenSource},</if>
+            <if test="status != null">#{status},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsScreen" parameterType="JgsScreen">
+        update jgs_screen_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="screenName != null">screen_name = #{screenName},</if>
+            <if test="screenSize != null">screen_size = #{screenSize},</if>
+            <if test="screenDescreption != null">screen_descreption = #{screenDescreption},</if>
+            <if test="screenSource != null">screen_source = #{screenSource},</if>
+            <if test="status != null">status = #{status},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsScreenById" parameterType="Long">
+        delete from jgs_screen_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsScreenByIds" parameterType="String">
+        delete from jgs_screen_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

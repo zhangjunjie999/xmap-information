@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsSuggestMapper">
+    
+    <resultMap type="JgsSuggest" id="JgsSuggestResult">
+        <result property="id"    column="id"    />
+        <result property="name"    column="name"    />
+        <result property="phone"    column="phone"    />
+        <result property="content"    column="content"    />
+        <result property="submitTime"    column="submit_time"    />
+        <result property="status"    column="status"    />
+    </resultMap>
+
+    <sql id="selectJgsSuggestVo">
+        select id, name, phone, content, submit_time, status from jgs_suggest_list
+    </sql>
+
+    <select id="selectJgsSuggestList" parameterType="JgsSuggest" resultMap="JgsSuggestResult">
+        <include refid="selectJgsSuggestVo"/>
+        <where>  
+            <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
+            <if test="phone != null  and phone != ''"> and phone = #{phone}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="submitTime != null "> and submit_time = #{submitTime}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsSuggestById" parameterType="Long" resultMap="JgsSuggestResult">
+        <include refid="selectJgsSuggestVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsSuggest" parameterType="JgsSuggest">
+        insert into jgs_suggest_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="name != null">name,</if>
+            <if test="phone != null">phone,</if>
+            <if test="content != null">content,</if>
+            <if test="submitTime != null">submit_time,</if>
+            <if test="status != null">status,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="name != null">#{name},</if>
+            <if test="phone != null">#{phone},</if>
+            <if test="content != null">#{content},</if>
+            <if test="submitTime != null">#{submitTime},</if>
+            <if test="status != null">#{status},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsSuggest" parameterType="JgsSuggest">
+        update jgs_suggest_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="name != null">name = #{name},</if>
+            <if test="phone != null">phone = #{phone},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="submitTime != null">submit_time = #{submitTime},</if>
+            <if test="status != null">status = #{status},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsSuggestById" parameterType="Long">
+        delete from jgs_suggest_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsSuggestByIds" parameterType="String">
+        delete from jgs_suggest_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

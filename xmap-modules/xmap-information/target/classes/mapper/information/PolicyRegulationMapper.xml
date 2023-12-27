@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.PolicyRegulationMapper">
+    
+    <resultMap type="PolicyRegulation" id="PolicyRegulationResult">
+        <result property="policesId"    column="polices_id"    />
+        <result property="title"    column="title"    />
+        <result property="content"    column="content"    />
+        <result property="creator"    column="creator"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="status"    column="status"    />
+        <result property="workSynchronization"    column="work_synchronization"    />
+    </resultMap>
+
+    <sql id="selectPolicyRegulationVo">
+        select polices_id, title, content, creator, create_time, status, work_synchronization from policy_regulations_list
+    </sql>
+
+    <select id="selectPolicyRegulationList" parameterType="PolicyRegulation" resultMap="PolicyRegulationResult">
+        <include refid="selectPolicyRegulationVo"/>
+        <where>  
+            <if test="title != null  and title != ''"> and title = #{title}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="creator != null  and creator != ''"> and creator = #{creator}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+            <if test="workSynchronization != null  and workSynchronization != ''"> and work_synchronization = #{workSynchronization}</if>
+        </where>
+    </select>
+    
+    <select id="selectPolicyRegulationByPolicesId" parameterType="Long" resultMap="PolicyRegulationResult">
+        <include refid="selectPolicyRegulationVo"/>
+        where polices_id = #{policesId}
+    </select>
+        
+    <insert id="insertPolicyRegulation" parameterType="PolicyRegulation" useGeneratedKeys="true" keyProperty="policesId">
+        insert into policy_regulations_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="title != null">title,</if>
+            <if test="content != null">content,</if>
+            <if test="creator != null">creator,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="status != null">status,</if>
+            <if test="workSynchronization != null">work_synchronization,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="title != null">#{title},</if>
+            <if test="content != null">#{content},</if>
+            <if test="creator != null">#{creator},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="status != null">#{status},</if>
+            <if test="workSynchronization != null">#{workSynchronization},</if>
+         </trim>
+    </insert>
+
+    <update id="updatePolicyRegulation" parameterType="PolicyRegulation">
+        update policy_regulations_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null">title = #{title},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="creator != null">creator = #{creator},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="workSynchronization != null">work_synchronization = #{workSynchronization},</if>
+        </trim>
+        where polices_id = #{policesId}
+    </update>
+
+    <delete id="deletePolicyRegulationByPolicesId" parameterType="Long">
+        delete from policy_regulations_list where polices_id = #{policesId}
+    </delete>
+
+    <delete id="deletePolicyRegulationByPolicesIds" parameterType="String">
+        delete from policy_regulations_list where polices_id in 
+        <foreach item="policesId" collection="array" open="(" separator="," close=")">
+            #{policesId}
+        </foreach>
+    </delete>
+</mapper>

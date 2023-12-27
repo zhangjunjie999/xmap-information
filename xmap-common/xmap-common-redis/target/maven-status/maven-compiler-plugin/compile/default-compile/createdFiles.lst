@@ -1,0 +1,3 @@
+com\xmap\common\redis\configure\RedisConfig.class
+com\xmap\common\redis\service\RedisService.class
+com\xmap\common\redis\configure\FastJson2JsonRedisSerializer.class

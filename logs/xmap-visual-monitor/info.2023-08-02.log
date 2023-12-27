@@ -1,0 +1,90 @@
+11:26:57.042 [main] INFO  c.a.n.c.r.client - [lambda$createClient$0,80] - [RpcClientFactory] create a new rpc client of d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0
+11:26:57.098 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 33 ms to scan 1 urls, producing 3 keys and 6 values 
+11:26:57.129 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 18 ms to scan 1 urls, producing 4 keys and 9 values 
+11:26:57.149 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 18 ms to scan 1 urls, producing 3 keys and 10 values 
+11:26:57.346 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 191 ms to scan 146 urls, producing 0 keys and 0 values 
+11:26:57.358 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 11 ms to scan 1 urls, producing 1 keys and 5 values 
+11:26:57.383 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 13 ms to scan 1 urls, producing 1 keys and 7 values 
+11:26:57.397 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 12 ms to scan 1 urls, producing 2 keys and 8 values 
+11:26:57.553 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 148 ms to scan 146 urls, producing 0 keys and 0 values 
+11:26:57.554 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+11:26:57.556 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$324/2109219177
+11:26:57.556 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$325/429058804
+11:26:57.556 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+11:26:57.557 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+11:26:57.563 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+11:27:10.535 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+11:27:13.549 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+11:27:16.552 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+11:27:16.552 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+11:27:16.553 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$334/510368405
+11:27:17.910 [main] INFO  c.x.m.m.XmapMonitorApplication - [logStartupProfileInfo,637] - The following 1 profile is active: "dev"
+11:27:19.015 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9100"]
+11:27:19.016 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+11:27:19.016 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.70]
+11:27:19.179 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+11:27:19.717 [main] INFO  c.a.c.s.SentinelWebMvcConfigurer - [addInterceptors,52] - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+11:27:19.936 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Success to connect a server [127.0.0.1:8848], connectionId = 1690946839735_127.0.0.1_58820
+11:27:19.937 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [d9dce54f-47ba-4edf-88a6-65d38c0e4458_config-0] Notify connected event to listeners.
+11:27:44.180 [main] INFO  c.a.n.c.r.client - [lambda$createClient$0,80] - [RpcClientFactory] create a new rpc client of f72495bb-9e1f-4692-8a2f-e31d30d7d2d3
+11:27:44.180 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] RpcClient init label, labels = {module=naming, source=sdk}
+11:27:44.182 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+11:27:44.182 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+11:27:44.182 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+11:27:44.183 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+11:27:44.294 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1690946864187_127.0.0.1_59242
+11:27:44.294 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+11:27:44.294 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Notify connected event to listeners.
+11:27:44.294 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$334/510368405
+11:27:44.330 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9100"]
+11:27:44.915 [nacos-grpc-client-executor-22] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 31
+11:27:44.917 [nacos-grpc-client-executor-22] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 31
+11:27:44.921 [nacos-grpc-client-executor-23] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 33
+11:27:44.921 [nacos-grpc-client-executor-23] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 33
+11:27:44.923 [nacos-grpc-client-executor-24] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 34
+11:27:44.924 [nacos-grpc-client-executor-24] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 34
+11:27:44.925 [nacos-grpc-client-executor-25] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 32
+11:27:44.926 [nacos-grpc-client-executor-25] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 32
+11:27:44.927 [nacos-grpc-client-executor-26] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 35
+11:27:44.928 [nacos-grpc-client-executor-26] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 35
+11:27:44.930 [nacos-grpc-client-executor-27] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 36
+11:27:44.931 [nacos-grpc-client-executor-27] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 36
+11:27:44.933 [nacos-grpc-client-executor-28] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 37
+11:27:44.934 [nacos-grpc-client-executor-28] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 37
+11:27:45.010 [nacos-grpc-client-executor-29] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 40
+11:27:45.011 [nacos-grpc-client-executor-29] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 40
+11:27:45.012 [nacos-grpc-client-executor-30] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 43
+11:27:45.013 [nacos-grpc-client-executor-30] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 43
+11:27:45.014 [nacos-grpc-client-executor-31] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 44
+11:27:45.015 [nacos-grpc-client-executor-31] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 44
+11:27:45.016 [nacos-grpc-client-executor-32] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 42
+11:27:45.017 [nacos-grpc-client-executor-32] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 42
+11:27:45.018 [nacos-grpc-client-executor-33] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 41
+11:27:45.018 [nacos-grpc-client-executor-33] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 41
+11:27:45.020 [nacos-grpc-client-executor-34] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 39
+11:27:45.020 [nacos-grpc-client-executor-34] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 39
+11:27:45.021 [nacos-grpc-client-executor-35] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 38
+11:27:45.022 [nacos-grpc-client-executor-35] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 38
+11:27:45.023 [nacos-grpc-client-executor-36] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Receive server push request, request = NotifySubscriberRequest, requestId = 45
+11:27:45.023 [nacos-grpc-client-executor-36] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [f72495bb-9e1f-4692-8a2f-e31d30d7d2d3] Ack server push request, request = NotifySubscriberRequest, requestId = 45
+11:27:47.059 [main] INFO  c.a.n.c.r.client - [shutdown,454] - Shutdown rpc client, set status to shutdown
+11:27:47.059 [main] INFO  c.a.n.c.r.client - [shutdown,456] - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@709d6de5[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+11:27:47.059 [main] INFO  c.a.n.c.r.client - [closeConnection,591] - Close current connection 1690946864187_127.0.0.1_59242
+11:27:47.059 [main] INFO  c.a.n.c.r.c.g.GrpcClient - [shutdown,85] - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@1a43a88e[Running, pool size = 61, active threads = 0, queued tasks = 0, completed tasks = 61]
+11:27:47.062 [main] INFO  c.a.n.c.r.client - [lambda$createClient$0,80] - [RpcClientFactory] create a new rpc client of bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd
+11:27:47.063 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd] RpcClient init label, labels = {module=naming, source=sdk}
+11:27:47.063 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+11:27:47.063 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+11:27:47.063 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+11:27:47.063 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+11:27:47.065 [grpc-nio-worker-ELG-1-12] INFO  c.a.n.s.i.g.i.AbstractClientStream - [inboundTrailersReceived,391] - Received trailers on closed stream:
+ Metadata()
+ {2}
+11:27:47.182 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1690946867068_127.0.0.1_59265
+11:27:47.182 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+11:27:47.182 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd] Notify connected event to listeners.
+11:27:47.182 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [bdd73aaa-3b15-4b8f-ab21-24919fc4b4bd] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$334/510368405
+11:27:47.190 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-9100"]
+11:27:47.190 [main] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+11:27:47.193 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-9100"]
+11:27:47.195 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-9100"]

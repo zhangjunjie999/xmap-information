@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsMediaMapper">
+    
+    <resultMap type="JgsMedia" id="JgsMediaResult">
+        <result property="id"    column="id"    />
+        <result property="type"    column="type"    />
+        <result property="title"    column="title"    />
+        <result property="description"    column="description"    />
+        <result property="url"    column="url"    />
+        <result property="status"    column="status"    />
+        <result property="addTime"    column="add_time"    />
+        <result property="changeTime"    column="change_time"    />
+    </resultMap>
+
+    <sql id="selectJgsMediaVo">
+        select id, type, title, description, url, status, add_time, change_time from jgs_media_list
+    </sql>
+
+    <select id="selectJgsMediaList" parameterType="JgsMedia" resultMap="JgsMediaResult">
+        <include refid="selectJgsMediaVo"/>
+        <where>  
+            <if test="type != null  and type != ''"> and type = #{type}</if>
+            <if test="title != null  and title != ''"> and title = #{title}</if>
+            <if test="description != null  and description != ''"> and description = #{description}</if>
+            <if test="url != null  and url != ''"> and url = #{url}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+            <if test="addTime != null "> and add_time = #{addTime}</if>
+            <if test="changeTime != null "> and change_time = #{changeTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsMediaById" parameterType="Long" resultMap="JgsMediaResult">
+        <include refid="selectJgsMediaVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsMedia" parameterType="JgsMedia" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_media_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="type != null">type,</if>
+            <if test="title != null">title,</if>
+            <if test="description != null">description,</if>
+            <if test="url != null">url,</if>
+            <if test="status != null">status,</if>
+            <if test="addTime != null">add_time,</if>
+            <if test="changeTime != null">change_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="type != null">#{type},</if>
+            <if test="title != null">#{title},</if>
+            <if test="description != null">#{description},</if>
+            <if test="url != null">#{url},</if>
+            <if test="status != null">#{status},</if>
+            <if test="addTime != null">#{addTime},</if>
+            <if test="changeTime != null">#{changeTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsMedia" parameterType="JgsMedia">
+        update jgs_media_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="type != null">type = #{type},</if>
+            <if test="title != null">title = #{title},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="url != null">url = #{url},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="addTime != null">add_time = #{addTime},</if>
+            <if test="changeTime != null">change_time = #{changeTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsMediaById" parameterType="Long">
+        delete from jgs_media_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsMediaByIds" parameterType="String">
+        delete from jgs_media_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

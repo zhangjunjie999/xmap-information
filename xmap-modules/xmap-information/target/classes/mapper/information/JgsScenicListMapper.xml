@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsScenicListMapper">
+    
+    <resultMap type="JgsScenicList" id="JgsScenicListResult">
+        <result property="id"    column="id"    />
+        <result property="siteName"    column="site_name"    />
+        <result property="notice"    column="notice"    />
+        <result property="weather"    column="weather"    />
+        <result property="attendance"    column="attendance"    />
+        <result property="parking"    column="parking"    />
+        <result property="ticket"    column="ticket"    />
+        <result property="nextScenic"    column="next_scenic"    />
+        <result property="numberScenic"    column="number_scenic"    />
+        <result property="nearbyScenic"    column="nearby_scenic"    />
+        <result property="emergencyPhone"    column="emergency_phone"    />
+        <result property="verifyStatus"    column="verify_status"    />
+        <result property="verifyPeople"    column="verify_people"    />
+        <result property="verifyDate"    column="verify_date"    />
+        <result property="publisher"    column="publisher"    />
+        <result property="publishTime"    column="publish_time"    />
+    </resultMap>
+
+    <sql id="selectJgsScenicListVo">
+        select id, site_name, notice, weather, attendance, parking, ticket, next_scenic, number_scenic, nearby_scenic, emergency_phone, verify_status, verify_people, verify_date, publisher, publish_time from jgs_scenic_list
+    </sql>
+
+    <select id="selectJgsScenicListList" parameterType="JgsScenicList" resultMap="JgsScenicListResult">
+        <include refid="selectJgsScenicListVo"/>
+        <where>  
+            <if test="siteName != null  and siteName != ''"> and site_name like concat('%', #{siteName}, '%')</if>
+            <if test="notice != null  and notice != ''"> and notice = #{notice}</if>
+            <if test="weather != null  and weather != ''"> and weather = #{weather}</if>
+            <if test="attendance != null "> and attendance = #{attendance}</if>
+            <if test="parking != null "> and parking = #{parking}</if>
+            <if test="ticket != null "> and ticket = #{ticket}</if>
+            <if test="nextScenic != null  and nextScenic != ''"> and next_scenic = #{nextScenic}</if>
+            <if test="numberScenic != null "> and number_scenic = #{numberScenic}</if>
+            <if test="nearbyScenic != null  and nearbyScenic != ''"> and nearby_scenic = #{nearbyScenic}</if>
+            <if test="emergencyPhone != null  and emergencyPhone != ''"> and emergency_phone = #{emergencyPhone}</if>
+            <if test="verifyStatus != null  and verifyStatus != ''"> and verify_status = #{verifyStatus}</if>
+            <if test="verifyPeople != null  and verifyPeople != ''"> and verify_people = #{verifyPeople}</if>
+            <if test="verifyDate != null "> and verify_date = #{verifyDate}</if>
+            <if test="publisher != null  and publisher != ''"> and publisher = #{publisher}</if>
+            <if test="publishTime != null "> and publish_time = #{publishTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsScenicListById" parameterType="Long" resultMap="JgsScenicListResult">
+        <include refid="selectJgsScenicListVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsScenicList" parameterType="JgsScenicList" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_scenic_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="siteName != null">site_name,</if>
+            <if test="notice != null">notice,</if>
+            <if test="weather != null">weather,</if>
+            <if test="attendance != null">attendance,</if>
+            <if test="parking != null">parking,</if>
+            <if test="ticket != null">ticket,</if>
+            <if test="nextScenic != null">next_scenic,</if>
+            <if test="numberScenic != null">number_scenic,</if>
+            <if test="nearbyScenic != null">nearby_scenic,</if>
+            <if test="emergencyPhone != null">emergency_phone,</if>
+            <if test="verifyStatus != null">verify_status,</if>
+            <if test="verifyPeople != null">verify_people,</if>
+            <if test="verifyDate != null">verify_date,</if>
+            <if test="publisher != null">publisher,</if>
+            <if test="publishTime != null">publish_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="siteName != null">#{siteName},</if>
+            <if test="notice != null">#{notice},</if>
+            <if test="weather != null">#{weather},</if>
+            <if test="attendance != null">#{attendance},</if>
+            <if test="parking != null">#{parking},</if>
+            <if test="ticket != null">#{ticket},</if>
+            <if test="nextScenic != null">#{nextScenic},</if>
+            <if test="numberScenic != null">#{numberScenic},</if>
+            <if test="nearbyScenic != null">#{nearbyScenic},</if>
+            <if test="emergencyPhone != null">#{emergencyPhone},</if>
+            <if test="verifyStatus != null">#{verifyStatus},</if>
+            <if test="verifyPeople != null">#{verifyPeople},</if>
+            <if test="verifyDate != null">#{verifyDate},</if>
+            <if test="publisher != null">#{publisher},</if>
+            <if test="publishTime != null">#{publishTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsScenicList" parameterType="JgsScenicList">
+        update jgs_scenic_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="siteName != null">site_name = #{siteName},</if>
+            <if test="notice != null">notice = #{notice},</if>
+            <if test="weather != null">weather = #{weather},</if>
+            <if test="attendance != null">attendance = #{attendance},</if>
+            <if test="parking != null">parking = #{parking},</if>
+            <if test="ticket != null">ticket = #{ticket},</if>
+            <if test="nextScenic != null">next_scenic = #{nextScenic},</if>
+            <if test="numberScenic != null">number_scenic = #{numberScenic},</if>
+            <if test="nearbyScenic != null">nearby_scenic = #{nearbyScenic},</if>
+            <if test="emergencyPhone != null">emergency_phone = #{emergencyPhone},</if>
+            <if test="verifyStatus != null">verify_status = #{verifyStatus},</if>
+            <if test="verifyPeople != null">verify_people = #{verifyPeople},</if>
+            <if test="verifyDate != null">verify_date = #{verifyDate},</if>
+            <if test="publisher != null">publisher = #{publisher},</if>
+            <if test="publishTime != null">publish_time = #{publishTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsScenicListById" parameterType="Long">
+        delete from jgs_scenic_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsScenicListByIds" parameterType="String">
+        delete from jgs_scenic_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

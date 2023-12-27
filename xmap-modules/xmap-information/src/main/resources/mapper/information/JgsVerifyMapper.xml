@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsVerifyMapper">
+
+    <resultMap type="JgsVerify" id="JgsVerifyResult">
+        <result property="id"    column="id"    />
+        <result property="type"    column="verify_type"    />
+<!--        <result property="content"    column="content"    />-->
+        <result property="publisher"    column="publisher"    />
+        <result property="people"    column="verify_people"    />
+        <result property="status"    column="verify_status"    />
+        <result property="verifyDate"    column="verify_date"    />
+        <result property="siteName"    column="site_name"    />
+        <result property="notice"    column="notice"    />
+        <result property="weather"    column="weather"    />
+        <result property="icon"    column="icon"    />
+        <result property="distance"    column="distance"    />
+        <result property="location"    column="location"    />
+        <result property="availablePark"    column="available_park"    />
+        <result property="occupiedPark"    column="occupied_park"    />
+        <result property="nearbyPark"    column="nearby_park"    />
+        <result property="availableSpace"    column="available_space"    />
+        <result property="emergencyPhone"    column="emergency_phone"    />
+    </resultMap>
+
+    <sql id="selectJgsVerifyVo">
+        select id, verify_type, site_name, notice, weather, icon, distance, location, available_park, occupied_park, nearby_park, available_space, emergency_phone,publisher, verify_people, verify_status, verify_date from jgs_park_guide
+    </sql>
+
+    <select id="selectJgsVerifyList" parameterType="JgsVerify" resultMap="JgsVerifyResult">
+        <include refid="selectJgsVerifyVo"/>
+        <where>
+            <if test="type != null  and type != ''"> and verify_type = #{type}</if>
+<!--            <if test="content != null  and content != ''"> and content = #{content}</if>-->
+            <if test="publisher != null  and publisher != ''"> and publisher = #{publisher}</if>
+            <if test="people != null  and people != ''"> and verify_people = #{people}</if>
+            <if test="status != null  and status != ''"> and verify_status = #{status}</if>
+            <if test="verifyDate != null "> and verify_date = #{verifyDate}</if>
+            <if test="siteName != null  and siteName != ''"> and site_name like concat('%', #{siteName}, '%')</if>
+            <if test="notice != null  and notice != ''"> and notice = #{notice}</if>
+            <if test="weather != null  and weather != ''"> and weather = #{weather}</if>
+            <if test="icon != null  and icon != ''"> and icon = #{icon}</if>
+            <if test="distance != null "> and distance = #{distance}</if>
+            <if test="location != null  and location != ''"> and location = #{location}</if>
+            <if test="availablePark != null "> and available_park = #{availablePark}</if>
+            <if test="occupiedPark != null "> and occupied_park = #{occupiedPark}</if>
+            <if test="nearbyPark != null  and nearbyPark != ''"> and nearby_park = #{nearbyPark}</if>
+            <if test="availableSpace != null "> and available_space = #{availableSpace}</if>
+            <if test="emergencyPhone != null  and emergencyPhone != ''"> and emergency_phone = #{emergencyPhone}</if>
+        </where>
+    </select>
+
+    <select id="selectJgsVerifyById" parameterType="Long" resultMap="JgsVerifyResult">
+        <include refid="selectJgsVerifyVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertJgsVerify" parameterType="JgsVerify" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_park_guide
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="type != null">verify_type,</if>
+<!--            <if test="content != null">content,</if>-->
+            <if test="publisher != null">publisher,</if>
+            <if test="people != null">verify_people,</if>
+            <if test="status != null">verify_status,</if>
+            <if test="verifyDate != null">verify_date,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="type != null">#{type},</if>
+<!--            <if test="content != null">#{content},</if>-->
+            <if test="publisher != null">#{publisher},</if>
+            <if test="people != null">#{people},</if>
+            <if test="status != null">#{status},</if>
+            <if test="verifyDate != null">#{verifyDate},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsVerify" parameterType="JgsVerify">
+        update jgs_park_guide
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="type != null">verify_type = #{type},</if>
+<!--            <if test="content != null">content = #{content},</if>-->
+            <if test="publisher != null">publisher = #{publisher},</if>
+            <if test="people != null">verify_people = #{people},</if>
+            <if test="status != null">verify_status = #{status},</if>
+            <if test="verifyDate != null">verify_date = #{verifyDate},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsVerifyById" parameterType="Long">
+        delete from jgs_park_guide where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsVerifyByIds" parameterType="String">
+        delete from jgs_park_guide where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

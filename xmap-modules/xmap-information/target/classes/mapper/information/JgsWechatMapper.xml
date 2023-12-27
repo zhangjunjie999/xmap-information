@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsWechatMapper">
+    
+    <resultMap type="JgsWechat" id="JgsWechatResult">
+        <result property="id"    column="id"    />
+        <result property="nickname"    column="nickname"    />
+        <result property="number"    column="number"    />
+        <result property="gender"    column="gender"    />
+        <result property="birthdate"    column="birthdate"    />
+        <result property="status"    column="status"    />
+    </resultMap>
+
+    <sql id="selectJgsWechatVo">
+        select id, nickname, number, gender, birthdate, status from jgs_wechat_list
+    </sql>
+
+    <select id="selectJgsWechatList" parameterType="JgsWechat" resultMap="JgsWechatResult">
+        <include refid="selectJgsWechatVo"/>
+        <where>  
+            <if test="nickname != null  and nickname != ''"> and nickname like concat('%', #{nickname}, '%')</if>
+            <if test="number != null  and number != ''"> and number = #{number}</if>
+            <if test="gender != null  and gender != ''"> and gender = #{gender}</if>
+            <if test="birthdate != null  and birthdate != ''"> and birthdate = #{birthdate}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsWechatById" parameterType="Long" resultMap="JgsWechatResult">
+        <include refid="selectJgsWechatVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsWechat" parameterType="JgsWechat" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_wechat_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="nickname != null">nickname,</if>
+            <if test="number != null">number,</if>
+            <if test="gender != null">gender,</if>
+            <if test="birthdate != null">birthdate,</if>
+            <if test="status != null">status,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="nickname != null">#{nickname},</if>
+            <if test="number != null">#{number},</if>
+            <if test="gender != null">#{gender},</if>
+            <if test="birthdate != null">#{birthdate},</if>
+            <if test="status != null">#{status},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsWechat" parameterType="JgsWechat">
+        update jgs_wechat_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="nickname != null">nickname = #{nickname},</if>
+            <if test="number != null">number = #{number},</if>
+            <if test="gender != null">gender = #{gender},</if>
+            <if test="birthdate != null">birthdate = #{birthdate},</if>
+            <if test="status != null">status = #{status},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsWechatById" parameterType="Long">
+        delete from jgs_wechat_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsWechatByIds" parameterType="String">
+        delete from jgs_wechat_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

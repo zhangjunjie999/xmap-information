@@ -1,0 +1,143 @@
+10:29:36.657 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+10:29:47.979 [main] INFO  c.a.n.c.r.client - [lambda$createClient$0,80] - [RpcClientFactory] create a new rpc client of 40af204b-87c6-4672-b7cb-3d17dac48604_config-0
+10:29:48.045 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 45 ms to scan 1 urls, producing 3 keys and 6 values 
+10:29:48.100 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 33 ms to scan 1 urls, producing 4 keys and 9 values 
+10:29:48.122 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 16 ms to scan 1 urls, producing 3 keys and 10 values 
+10:29:48.383 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 258 ms to scan 199 urls, producing 0 keys and 0 values 
+10:29:48.397 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 13 ms to scan 1 urls, producing 1 keys and 5 values 
+10:29:48.414 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 14 ms to scan 1 urls, producing 1 keys and 7 values 
+10:29:48.433 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 14 ms to scan 1 urls, producing 2 keys and 8 values 
+10:29:48.657 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 219 ms to scan 199 urls, producing 0 keys and 0 values 
+10:29:48.658 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+10:29:48.658 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$334/832145584
+10:29:48.658 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$335/224060798
+10:29:48.659 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+10:29:48.660 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+10:29:48.666 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+10:29:52.892 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+10:30:03.466 [main] INFO  c.a.n.c.r.client - [lambda$createClient$0,80] - [RpcClientFactory] create a new rpc client of 305a3ab7-568a-4a47-8561-6b813e9f9528_config-0
+10:30:03.525 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 41 ms to scan 1 urls, producing 3 keys and 6 values 
+10:30:03.563 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 22 ms to scan 1 urls, producing 4 keys and 9 values 
+10:30:03.572 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+10:30:03.591 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 21 ms to scan 1 urls, producing 3 keys and 10 values 
+10:30:03.896 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 297 ms to scan 199 urls, producing 0 keys and 0 values 
+10:30:03.912 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 15 ms to scan 1 urls, producing 1 keys and 5 values 
+10:30:03.932 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 16 ms to scan 1 urls, producing 1 keys and 7 values 
+10:30:03.952 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 18 ms to scan 1 urls, producing 2 keys and 8 values 
+10:30:04.158 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 204 ms to scan 199 urls, producing 0 keys and 0 values 
+10:30:04.159 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] RpcClient init label, labels = {module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+10:30:04.159 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$334/832145584
+10:30:04.160 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$335/224060798
+10:30:04.160 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+10:30:04.161 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+10:30:04.167 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+10:30:06.589 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+10:30:09.601 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+10:30:09.603 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+10:30:09.604 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$344/979420182
+10:30:10.971 [main] INFO  c.x.c.XmapConsultApplication - [logStartupProfileInfo,637] - The following 1 profile is active: "dev"
+10:30:13.817 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9209"]
+10:30:13.818 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:30:13.818 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.70]
+10:30:13.938 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Success to connect a server [127.0.0.1:8848], connectionId = 1691116213727_127.0.0.1_52150
+10:30:13.939 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Notify connected event to listeners.
+10:30:14.041 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:30:17.177 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+10:30:20.188 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+10:30:21.482 [main] INFO  c.a.d.p.DruidDataSource - [init,996] - {dataSource-1,master} inited
+10:30:21.483 [main] INFO  c.b.d.d.DynamicRoutingDataSource - [addDataSource,154] - dynamic-datasource - add a datasource named [master] success
+10:30:21.483 [main] INFO  c.b.d.d.DynamicRoutingDataSource - [afterPropertiesSet,234] - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+10:30:23.005 [main] INFO  c.a.c.s.SentinelWebMvcConfigurer - [addInterceptors,52] - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+10:30:23.194 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+10:30:23.195 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+10:30:23.196 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$344/1184694332
+10:30:24.565 [main] INFO  c.x.g.XmapGuideApplication - [logStartupProfileInfo,637] - The following 1 profile is active: "dev"
+10:30:27.270 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9214"]
+10:30:27.271 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:30:27.271 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.70]
+10:30:27.507 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:30:28.643 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Success to connect a server [127.0.0.1:8848], connectionId = 1691116228438_127.0.0.1_52300
+10:30:28.644 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Notify connected event to listeners.
+10:30:28.908 [main] INFO  c.a.c.s.SentinelWebMvcConfigurer - [addInterceptors,52] - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+10:30:50.822 [main] INFO  c.a.n.c.r.client - [lambda$createClient$0,80] - [RpcClientFactory] create a new rpc client of 0032f8bc-769d-46da-970d-907a7fd78411
+10:30:50.822 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] RpcClient init label, labels = {module=naming, source=sdk}
+10:30:50.824 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+10:30:50.824 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+10:30:50.825 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+10:30:50.825 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+10:30:50.946 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1691116250831_127.0.0.1_52521
+10:30:50.946 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Notify connected event to listeners.
+10:30:50.946 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+10:30:50.947 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$344/979420182
+10:30:50.998 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9209"]
+10:30:51.026 [main] INFO  c.a.c.n.r.NacosServiceRegistry - [register,75] - nacos registry, DEFAULT_GROUP xmap-consult 10.100.4.8:9209 register finished
+10:30:51.542 [nacos-grpc-client-executor-5] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Receive server push request, request = NotifySubscriberRequest, requestId = 40
+10:30:51.546 [nacos-grpc-client-executor-5] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Ack server push request, request = NotifySubscriberRequest, requestId = 40
+10:30:57.215 [main] INFO  c.a.n.c.r.client - [lambda$createClient$0,80] - [RpcClientFactory] create a new rpc client of 8ef1a313-c454-4286-9606-99ec064aeba1
+10:30:57.215 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] RpcClient init label, labels = {module=naming, source=sdk}
+10:30:57.217 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+10:30:57.217 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+10:30:57.217 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+10:30:57.218 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
+10:30:57.345 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1691116257223_127.0.0.1_52673
+10:30:57.346 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Notify connected event to listeners.
+10:30:57.345 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+10:30:57.346 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$344/1184694332
+10:30:57.379 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9214"]
+10:30:57.423 [main] INFO  c.a.c.n.r.NacosServiceRegistry - [register,75] - nacos registry, DEFAULT_GROUP xmap-guide 10.100.4.8:9214 register finished
+10:30:57.887 [nacos-grpc-client-executor-6] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Receive server push request, request = NotifySubscriberRequest, requestId = 41
+10:30:57.892 [nacos-grpc-client-executor-6] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Ack server push request, request = NotifySubscriberRequest, requestId = 41
+10:31:06.906 [main] INFO  c.x.c.XmapConsultApplication - [logStarted,61] - Started XmapConsultApplication in 97.049 seconds (JVM running for 101.477)
+10:31:06.926 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListener,129] - [Nacos Config] Listening config: dataId=xmap-consult, group=DEFAULT_GROUP
+10:31:06.927 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListener,129] - [Nacos Config] Listening config: dataId=xmap-consult.yml, group=DEFAULT_GROUP
+10:31:06.927 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListener,129] - [Nacos Config] Listening config: dataId=xmap-consult-dev.yml, group=DEFAULT_GROUP
+10:31:16.858 [main] INFO  c.x.g.XmapGuideApplication - [logStarted,61] - Started XmapGuideApplication in 98.103 seconds (JVM running for 103.171)
+10:31:16.869 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListener,129] - [Nacos Config] Listening config: dataId=xmap-guide.yml, group=DEFAULT_GROUP
+10:31:16.869 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListener,129] - [Nacos Config] Listening config: dataId=xmap-guide, group=DEFAULT_GROUP
+10:31:16.870 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListener,129] - [Nacos Config] Listening config: dataId=xmap-guide-dev.yml, group=DEFAULT_GROUP
+10:31:29.814 [RMI TCP Connection(8)-10.100.4.8] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:31:30.424 [RMI TCP Connection(7)-10.100.4.8] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:03:03.034 [nacos-grpc-client-executor-162] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Receive server push request, request = ClientDetectionRequest, requestId = 89
+11:03:03.035 [nacos-grpc-client-executor-162] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Ack server push request, request = ClientDetectionRequest, requestId = 89
+11:03:03.037 [nacos-grpc-client-executor-163] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Receive server push request, request = ClientDetectionRequest, requestId = 91
+11:03:03.037 [nacos-grpc-client-executor-163] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Ack server push request, request = ClientDetectionRequest, requestId = 91
+14:00:37.356 [nacos-grpc-client-executor-1058] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Receive server push request, request = ClientDetectionRequest, requestId = 103
+14:00:37.357 [nacos-grpc-client-executor-1058] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Ack server push request, request = ClientDetectionRequest, requestId = 103
+14:00:37.363 [nacos-grpc-client-executor-1035] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 110
+14:00:37.364 [nacos-grpc-client-executor-1035] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 110
+14:00:37.371 [nacos-grpc-client-executor-1038] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 121
+14:00:37.371 [nacos-grpc-client-executor-1038] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 121
+15:34:57.772 [nacos-grpc-client-executor-2308] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Receive server push request, request = ClientDetectionRequest, requestId = 142
+15:34:57.772 [nacos-grpc-client-executor-2308] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Ack server push request, request = ClientDetectionRequest, requestId = 142
+15:34:57.781 [nacos-grpc-client-executor-2209] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 151
+15:34:57.781 [nacos-grpc-client-executor-2209] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 151
+15:34:57.790 [nacos-grpc-client-executor-2180] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 168
+15:34:57.791 [nacos-grpc-client-executor-2180] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 168
+15:34:57.796 [nacos-grpc-client-executor-2233] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Receive server push request, request = ClientDetectionRequest, requestId = 161
+15:34:57.796 [nacos-grpc-client-executor-2233] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Ack server push request, request = ClientDetectionRequest, requestId = 161
+17:25:41.336 [lettuce-nioEventLoop-4-1] INFO  i.l.c.p.CommandHandler - [log,217] - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+17:25:41.797 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [8ef1a313-c454-4286-9606-99ec064aeba1] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+17:25:41.440 [lettuce-eventExecutorLoop-1-2] INFO  i.l.c.p.ConnectionWatchdog - [log,171] - Reconnecting, last destination was localhost/127.0.0.1:6379
+17:25:41.810 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [0032f8bc-769d-46da-970d-907a7fd78411] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+17:25:43.573 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Server healthy check fail, currentConnection = 1691116228438_127.0.0.1_52300
+17:25:43.573 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [305a3ab7-568a-4a47-8561-6b813e9f9528_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+17:25:43.618 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Server healthy check fail, currentConnection = 1691116213727_127.0.0.1_52150
+17:25:43.619 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [40af204b-87c6-4672-b7cb-3d17dac48604_config-0] Try to reconnect to a new server, server is  not appointed, will choose a random server.

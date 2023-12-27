@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsAccountMapper">
+
+    <resultMap type="JgsAccount" id="JgsAccountResult">
+        <result property="id"    column="id"    />
+        <result property="username"    column="username"    />
+        <result property="password"    column="password"    />
+        <result property="email"    column="email"    />
+        <result property="phone"    column="phone"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectJgsAccountVo">
+        select id, username, password, email, `phone`, create_time, update_time from jgs_account_list
+    </sql>
+
+    <select id="selectJgsAccountList" parameterType="JgsAccount" resultMap="JgsAccountResult">
+        <include refid="selectJgsAccountVo"/>
+        <where>
+            <if test="username != null  and username != ''"> and username like concat('%', #{username}, '%')</if>
+            <if test="password != null  and password != ''"> and password = #{password}</if>
+            <if test="email != null  and email != ''"> and email = #{email}</if>
+            <if test="phone != null "> and phone = #{phone}</if>
+        </where>
+    </select>
+
+    <select id="selectJgsAccountById" parameterType="Long" resultMap="JgsAccountResult">
+        <include refid="selectJgsAccountVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertJgsAccount" parameterType="JgsAccount" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_account_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="username != null and username != ''">username,</if>
+            <if test="password != null and password != ''">password,</if>
+            <if test="email != null">email,</if>
+            <if test="phone != null">phone,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="username != null and username != ''">#{username},</if>
+            <if test="password != null and password != ''">#{password},</if>
+            <if test="email != null">#{email},</if>
+            <if test="phone != null">#{phone},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsAccount" parameterType="JgsAccount">
+        update jgs_account_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="username != null and username != ''">username = #{username},</if>
+            <if test="password != null and password != ''">password = #{password},</if>
+            <if test="email != null">email = #{email},</if>
+            <if test="phone != null">phone = #{phone},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsAccountById" parameterType="Long">
+        delete from jgs_account_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsAccountByIds" parameterType="String">
+        delete from jgs_account_list where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

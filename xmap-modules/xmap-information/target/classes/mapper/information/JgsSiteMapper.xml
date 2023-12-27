@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsSiteMapper">
+    
+    <resultMap type="JgsSite" id="JgsSiteResult">
+        <result property="id"    column="id"    />
+        <result property="sign"    column="sign"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <sql id="selectJgsSiteVo">
+        select id, sign, remark from jgs_site_list
+    </sql>
+
+    <select id="selectJgsSiteList" parameterType="JgsSite" resultMap="JgsSiteResult">
+        <include refid="selectJgsSiteVo"/>
+        <where>  
+            <if test="sign != null  and sign != ''"> and sign = #{sign}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsSiteById" parameterType="Long" resultMap="JgsSiteResult">
+        <include refid="selectJgsSiteVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsSite" parameterType="JgsSite" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_site_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="sign != null">sign,</if>
+            <if test="remark != null">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="sign != null">#{sign},</if>
+            <if test="remark != null">#{remark},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsSite" parameterType="JgsSite">
+        update jgs_site_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="sign != null">sign = #{sign},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsSiteById" parameterType="Long">
+        delete from jgs_site_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsSiteByIds" parameterType="String">
+        delete from jgs_site_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

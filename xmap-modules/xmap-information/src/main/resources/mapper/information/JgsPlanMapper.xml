@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsPlanMapper">
+    
+    <resultMap type="JgsPlan" id="JgsPlanResult">
+        <result property="id"    column="id"    />
+        <result property="type"    column="type"    />
+        <result property="planName"    column="plan_name"    />
+        <result property="description"    column="description"    />
+        <result property="status"    column="status"    />
+        <result property="addTime"    column="add_time"    />
+        <result property="changeTime"    column="change_time"    />
+    </resultMap>
+
+    <sql id="selectJgsPlanVo">
+        select id, type, plan_name, description, status, add_time, change_time from jgs_plan_list
+    </sql>
+
+    <select id="selectJgsPlanList" parameterType="JgsPlan" resultMap="JgsPlanResult">
+        <include refid="selectJgsPlanVo"/>
+        <where>  
+            <if test="type != null  and type != ''"> and type = #{type}</if>
+            <if test="planName != null  and planName != ''"> and plan_name like concat('%', #{planName}, '%')</if>
+            <if test="description != null  and description != ''"> and description = #{description}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+            <if test="addTime != null "> and add_time = #{addTime}</if>
+            <if test="changeTime != null "> and change_time = #{changeTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsPlanById" parameterType="Long" resultMap="JgsPlanResult">
+        <include refid="selectJgsPlanVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsPlan" parameterType="JgsPlan">
+        insert into jgs_plan_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="type != null">type,</if>
+            <if test="planName != null">plan_name,</if>
+            <if test="description != null">description,</if>
+            <if test="status != null">status,</if>
+            <if test="addTime != null">add_time,</if>
+            <if test="changeTime != null">change_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="type != null">#{type},</if>
+            <if test="planName != null">#{planName},</if>
+            <if test="description != null">#{description},</if>
+            <if test="status != null">#{status},</if>
+            <if test="addTime != null">#{addTime},</if>
+            <if test="changeTime != null">#{changeTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsPlan" parameterType="JgsPlan">
+        update jgs_plan_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="type != null">type = #{type},</if>
+            <if test="planName != null">plan_name = #{planName},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="addTime != null">add_time = #{addTime},</if>
+            <if test="changeTime != null">change_time = #{changeTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsPlanById" parameterType="Long">
+        delete from jgs_plan_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsPlanByIds" parameterType="String">
+        delete from jgs_plan_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

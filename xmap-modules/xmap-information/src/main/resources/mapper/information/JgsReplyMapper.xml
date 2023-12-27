@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsReplyMapper">
+    
+    <resultMap type="JgsReply" id="JgsReplyResult">
+        <result property="id"    column="id"    />
+        <result property="suggestId"    column="suggest_id"    />
+        <result property="content"    column="content"    />
+        <result property="replyTime"    column="reply_time"    />
+    </resultMap>
+
+    <sql id="selectJgsReplyVo">
+        select id, suggest_id, content, reply_time from jgs_reply_list
+    </sql>
+
+    <select id="selectJgsReplyList" parameterType="JgsReply" resultMap="JgsReplyResult">
+        <include refid="selectJgsReplyVo"/>
+        <where>  
+            <if test="suggestId != null "> and suggest_id = #{suggestId}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="replyTime != null "> and reply_time = #{replyTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsReplyById" parameterType="Long" resultMap="JgsReplyResult">
+        <include refid="selectJgsReplyVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsReply" parameterType="JgsReply">
+        insert into jgs_reply_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="suggestId != null">suggest_id,</if>
+            <if test="content != null">content,</if>
+            <if test="replyTime != null">reply_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="suggestId != null">#{suggestId},</if>
+            <if test="content != null">#{content},</if>
+            <if test="replyTime != null">#{replyTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsReply" parameterType="JgsReply">
+        update jgs_reply_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="suggestId != null">suggest_id = #{suggestId},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="replyTime != null">reply_time = #{replyTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsReplyById" parameterType="Long">
+        delete from jgs_reply_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsReplyByIds" parameterType="String">
+        delete from jgs_reply_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

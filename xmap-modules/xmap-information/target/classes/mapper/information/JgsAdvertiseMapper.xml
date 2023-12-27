@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsAdvertiseMapper">
+    
+    <resultMap type="JgsAdvertise" id="JgsAdvertiseResult">
+        <result property="id"    column="id"    />
+        <result property="advertiseTitle"    column="advertise_title"    />
+        <result property="advertiseDescription"    column="advertise_description"    />
+        <result property="advertiseType"    column="advertise_type"    />
+        <result property="advertiseContent"    column="advertise_content"    />
+        <result property="advertiseLocation"    column="advertise_location"    />
+        <result property="startTime"    column="start_time"    />
+        <result property="endTime"    column="end_time"    />
+    </resultMap>
+
+    <sql id="selectJgsAdvertiseVo">
+        select id, advertise_title, advertise_description, advertise_type, advertise_content, advertise_location, start_time, end_time from jgs_advertise_list
+    </sql>
+
+    <select id="selectJgsAdvertiseList" parameterType="JgsAdvertise" resultMap="JgsAdvertiseResult">
+        <include refid="selectJgsAdvertiseVo"/>
+        <where>  
+            <if test="advertiseTitle != null  and advertiseTitle != ''"> and advertise_title = #{advertiseTitle}</if>
+            <if test="advertiseDescription != null  and advertiseDescription != ''"> and advertise_description = #{advertiseDescription}</if>
+            <if test="advertiseType != null  and advertiseType != ''"> and advertise_type = #{advertiseType}</if>
+            <if test="advertiseContent != null  and advertiseContent != ''"> and advertise_content = #{advertiseContent}</if>
+            <if test="advertiseLocation != null  and advertiseLocation != ''"> and advertise_location = #{advertiseLocation}</if>
+            <if test="startTime != null "> and start_time = #{startTime}</if>
+            <if test="endTime != null "> and end_time = #{endTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsAdvertiseById" parameterType="Long" resultMap="JgsAdvertiseResult">
+        <include refid="selectJgsAdvertiseVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsAdvertise" parameterType="JgsAdvertise" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_advertise_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="advertiseTitle != null">advertise_title,</if>
+            <if test="advertiseDescription != null">advertise_description,</if>
+            <if test="advertiseType != null">advertise_type,</if>
+            <if test="advertiseContent != null">advertise_content,</if>
+            <if test="advertiseLocation != null">advertise_location,</if>
+            <if test="startTime != null">start_time,</if>
+            <if test="endTime != null">end_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="advertiseTitle != null">#{advertiseTitle},</if>
+            <if test="advertiseDescription != null">#{advertiseDescription},</if>
+            <if test="advertiseType != null">#{advertiseType},</if>
+            <if test="advertiseContent != null">#{advertiseContent},</if>
+            <if test="advertiseLocation != null">#{advertiseLocation},</if>
+            <if test="startTime != null">#{startTime},</if>
+            <if test="endTime != null">#{endTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsAdvertise" parameterType="JgsAdvertise">
+        update jgs_advertise_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="advertiseTitle != null">advertise_title = #{advertiseTitle},</if>
+            <if test="advertiseDescription != null">advertise_description = #{advertiseDescription},</if>
+            <if test="advertiseType != null">advertise_type = #{advertiseType},</if>
+            <if test="advertiseContent != null">advertise_content = #{advertiseContent},</if>
+            <if test="advertiseLocation != null">advertise_location = #{advertiseLocation},</if>
+            <if test="startTime != null">start_time = #{startTime},</if>
+            <if test="endTime != null">end_time = #{endTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsAdvertiseById" parameterType="Long">
+        delete from jgs_advertise_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsAdvertiseByIds" parameterType="String">
+        delete from jgs_advertise_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

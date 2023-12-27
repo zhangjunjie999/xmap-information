@@ -1,0 +1,8 @@
+com\xmap\common\swagger\config\SwaggerAutoConfiguration.class
+com\xmap\common\swagger\config\SwaggerBeanPostProcessor.class
+com\xmap\common\swagger\config\SwaggerProperties.class
+com\xmap\common\swagger\annotation\EnableCustomSwagger2.class
+com\xmap\common\swagger\config\SwaggerProperties$AuthorizationScope.class
+com\xmap\common\swagger\config\SwaggerProperties$Authorization.class
+com\xmap\common\swagger\config\SwaggerWebConfiguration.class
+com\xmap\common\swagger\config\SwaggerProperties$Contact.class

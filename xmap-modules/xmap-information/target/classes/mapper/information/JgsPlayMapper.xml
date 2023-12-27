@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsPlayMapper">
+    
+    <resultMap type="JgsPlay" id="JgsPlayResult">
+        <result property="id"    column="id"    />
+        <result property="type"    column="type"    />
+        <result property="title"    column="title"    />
+        <result property="content"    column="content"    />
+        <result property="address"    column="address"    />
+        <result property="phone"    column="phone"    />
+        <result property="addTime"    column="add_time"    />
+        <result property="changeTime"    column="change_time"    />
+    </resultMap>
+
+    <sql id="selectJgsPlayVo">
+        select id, type, title, content, address, phone, add_time, change_time from jgs_play_list
+    </sql>
+
+    <select id="selectJgsPlayList" parameterType="JgsPlay" resultMap="JgsPlayResult">
+        <include refid="selectJgsPlayVo"/>
+        <where>  
+            <if test="type != null  and type != ''"> and type = #{type}</if>
+            <if test="title != null  and title != ''"> and title = #{title}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="address != null  and address != ''"> and address = #{address}</if>
+            <if test="phone != null  and phone != ''"> and phone = #{phone}</if>
+            <if test="addTime != null "> and add_time = #{addTime}</if>
+            <if test="changeTime != null "> and change_time = #{changeTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsPlayById" parameterType="Long" resultMap="JgsPlayResult">
+        <include refid="selectJgsPlayVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsPlay" parameterType="JgsPlay" useGeneratedKeys="true" keyProperty="id">
+        insert into jgs_play_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="type != null">type,</if>
+            <if test="title != null">title,</if>
+            <if test="content != null">content,</if>
+            <if test="address != null">address,</if>
+            <if test="phone != null">phone,</if>
+            <if test="addTime != null">add_time,</if>
+            <if test="changeTime != null">change_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="type != null">#{type},</if>
+            <if test="title != null">#{title},</if>
+            <if test="content != null">#{content},</if>
+            <if test="address != null">#{address},</if>
+            <if test="phone != null">#{phone},</if>
+            <if test="addTime != null">#{addTime},</if>
+            <if test="changeTime != null">#{changeTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsPlay" parameterType="JgsPlay">
+        update jgs_play_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="type != null">type = #{type},</if>
+            <if test="title != null">title = #{title},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="address != null">address = #{address},</if>
+            <if test="phone != null">phone = #{phone},</if>
+            <if test="addTime != null">add_time = #{addTime},</if>
+            <if test="changeTime != null">change_time = #{changeTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsPlayById" parameterType="Long">
+        delete from jgs_play_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsPlayByIds" parameterType="String">
+        delete from jgs_play_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

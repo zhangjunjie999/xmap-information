@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.JgsUrgencyMapper">
+    
+    <resultMap type="JgsUrgency" id="JgsUrgencyResult">
+        <result property="id"    column="id"    />
+        <result property="type"    column="type"    />
+        <result property="title"    column="title"    />
+        <result property="content"    column="content"    />
+        <result property="url"    column="url"    />
+        <result property="isUrgency"    column="is_urgency"    />
+        <result property="status"    column="status"    />
+        <result property="playTime"    column="play_time"    />
+    </resultMap>
+
+    <sql id="selectJgsUrgencyVo">
+        select id, type, title, content, url, is_urgency, status, play_time from jgs_urgency_list
+    </sql>
+
+    <select id="selectJgsUrgencyList" parameterType="JgsUrgency" resultMap="JgsUrgencyResult">
+        <include refid="selectJgsUrgencyVo"/>
+        <where>  
+            <if test="type != null  and type != ''"> and type = #{type}</if>
+            <if test="title != null  and title != ''"> and title = #{title}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="url != null  and url != ''"> and url = #{url}</if>
+            <if test="isUrgency != null "> and is_urgency = #{isUrgency}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+            <if test="playTime != null "> and play_time = #{playTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectJgsUrgencyById" parameterType="Long" resultMap="JgsUrgencyResult">
+        <include refid="selectJgsUrgencyVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJgsUrgency" parameterType="JgsUrgency">
+        insert into jgs_urgency_list
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="type != null">type,</if>
+            <if test="title != null">title,</if>
+            <if test="content != null">content,</if>
+            <if test="url != null">url,</if>
+            <if test="isUrgency != null">is_urgency,</if>
+            <if test="status != null">status,</if>
+            <if test="playTime != null">play_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="type != null">#{type},</if>
+            <if test="title != null">#{title},</if>
+            <if test="content != null">#{content},</if>
+            <if test="url != null">#{url},</if>
+            <if test="isUrgency != null">#{isUrgency},</if>
+            <if test="status != null">#{status},</if>
+            <if test="playTime != null">#{playTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateJgsUrgency" parameterType="JgsUrgency">
+        update jgs_urgency_list
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="type != null">type = #{type},</if>
+            <if test="title != null">title = #{title},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="url != null">url = #{url},</if>
+            <if test="isUrgency != null">is_urgency = #{isUrgency},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="playTime != null">play_time = #{playTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJgsUrgencyById" parameterType="Long">
+        delete from jgs_urgency_list where id = #{id}
+    </delete>
+
+    <delete id="deleteJgsUrgencyByIds" parameterType="String">
+        delete from jgs_urgency_list where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

@@ -1,0 +1,14 @@
+com\xmap\gen\service\IGenTableService.class
+com\xmap\gen\util\VelocityInitializer.class
+com\xmap\gen\mapper\GenTableColumnMapper.class
+com\xmap\gen\util\GenUtils.class
+com\xmap\gen\XmapGenApplication.class
+com\xmap\gen\service\IGenTableColumnService.class
+com\xmap\gen\domain\GenTable.class
+com\xmap\gen\util\VelocityUtils.class
+com\xmap\gen\domain\GenTableColumn.class
+com\xmap\gen\service\GenTableServiceImpl.class
+com\xmap\gen\config\GenConfig.class
+com\xmap\gen\controller\GenController.class
+com\xmap\gen\mapper\GenTableMapper.class
+com\xmap\gen\service\GenTableColumnServiceImpl.class

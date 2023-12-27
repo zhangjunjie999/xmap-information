@@ -1,0 +1,3 @@
+com.xmap.common.swagger.config.SwaggerAutoConfiguration
+com.xmap.common.swagger.config.SwaggerWebConfiguration
+com.xmap.common.swagger.config.SwaggerBeanPostProcessor

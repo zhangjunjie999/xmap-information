@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmap.information.mapper.InformationWeatherMapper">
+    
+    <resultMap type="InformationWeather" id="InformationWeatherResult">
+        <result property="weatherId"    column="weather_id"    />
+        <result property="weatherCity"    column="weather_city"    />
+        <result property="weatherInfo"    column="weather_info"    />
+        <result property="weatherTemperature"    column="weather_temperature"    />
+        <result property="weatherLow"    column="weather_low"    />
+        <result property="weatherHigh"    column="weather_high"    />
+        <result property="weatherTime"    column="weather_time"    />
+        <result property="weatherHumidity"    column="weather_humidity"    />
+        <result property="weatherPower"    column="weather_power"    />
+        <result property="weatherDirection"    column="weather_direction"    />
+        <result property="weatherRise"    column="weather_rise"    />
+        <result property="weatherDown"    column="weather_down"    />
+        <result property="weatherAir"    column="weather_air"    />
+    </resultMap>
+
+    <sql id="selectInformationWeatherVo">
+        select weather_id, weather_city, weather_info, weather_temperature, weather_low, weather_high, weather_time, weather_humidity, weather_power, weather_direction, weather_rise, weather_down, weather_air from information_weather
+    </sql>
+
+    <select id="selectInformationWeatherList" parameterType="InformationWeather" resultMap="InformationWeatherResult">
+        <include refid="selectInformationWeatherVo"/>
+        <where>  
+            <if test="weatherCity != null  and weatherCity != ''"> and weather_city = #{weatherCity}</if>
+            <if test="weatherInfo != null  and weatherInfo != ''"> and weather_info = #{weatherInfo}</if>
+            <if test="weatherTemperature != null  and weatherTemperature != ''"> and weather_temperature = #{weatherTemperature}</if>
+            <if test="weatherLow != null  and weatherLow != ''"> and weather_low = #{weatherLow}</if>
+            <if test="weatherHigh != null  and weatherHigh != ''"> and weather_high = #{weatherHigh}</if>
+            <if test="weatherTime != null "> and weather_time = #{weatherTime}</if>
+            <if test="weatherHumidity != null  and weatherHumidity != ''"> and weather_humidity = #{weatherHumidity}</if>
+            <if test="weatherPower != null  and weatherPower != ''"> and weather_power = #{weatherPower}</if>
+            <if test="weatherDirection != null  and weatherDirection != ''"> and weather_direction = #{weatherDirection}</if>
+            <if test="weatherRise != null  and weatherRise != ''"> and weather_rise = #{weatherRise}</if>
+            <if test="weatherDown != null  and weatherDown != ''"> and weather_down = #{weatherDown}</if>
+            <if test="weatherAir != null  and weatherAir != ''"> and weather_air = #{weatherAir}</if>
+        </where>
+    </select>
+    
+    <select id="selectInformationWeatherByWeatherId" parameterType="Long" resultMap="InformationWeatherResult">
+        <include refid="selectInformationWeatherVo"/>
+        where weather_id = #{weatherId}
+    </select>
+        
+    <insert id="insertInformationWeather" parameterType="InformationWeather" useGeneratedKeys="true" keyProperty="weatherId">
+        insert into information_weather
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="weatherCity != null">weather_city,</if>
+            <if test="weatherInfo != null">weather_info,</if>
+            <if test="weatherTemperature != null">weather_temperature,</if>
+            <if test="weatherLow != null">weather_low,</if>
+            <if test="weatherHigh != null">weather_high,</if>
+            <if test="weatherTime != null">weather_time,</if>
+            <if test="weatherHumidity != null">weather_humidity,</if>
+            <if test="weatherPower != null">weather_power,</if>
+            <if test="weatherDirection != null">weather_direction,</if>
+            <if test="weatherRise != null">weather_rise,</if>
+            <if test="weatherDown != null">weather_down,</if>
+            <if test="weatherAir != null">weather_air,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="weatherCity != null">#{weatherCity},</if>
+            <if test="weatherInfo != null">#{weatherInfo},</if>
+            <if test="weatherTemperature != null">#{weatherTemperature},</if>
+            <if test="weatherLow != null">#{weatherLow},</if>
+            <if test="weatherHigh != null">#{weatherHigh},</if>
+            <if test="weatherTime != null">#{weatherTime},</if>
+            <if test="weatherHumidity != null">#{weatherHumidity},</if>
+            <if test="weatherPower != null">#{weatherPower},</if>
+            <if test="weatherDirection != null">#{weatherDirection},</if>
+            <if test="weatherRise != null">#{weatherRise},</if>
+            <if test="weatherDown != null">#{weatherDown},</if>
+            <if test="weatherAir != null">#{weatherAir},</if>
+         </trim>
+    </insert>
+
+    <update id="updateInformationWeather" parameterType="InformationWeather">
+        update information_weather
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="weatherCity != null">weather_city = #{weatherCity},</if>
+            <if test="weatherInfo != null">weather_info = #{weatherInfo},</if>
+            <if test="weatherTemperature != null">weather_temperature = #{weatherTemperature},</if>
+            <if test="weatherLow != null">weather_low = #{weatherLow},</if>
+            <if test="weatherHigh != null">weather_high = #{weatherHigh},</if>
+            <if test="weatherTime != null">weather_time = #{weatherTime},</if>
+            <if test="weatherHumidity != null">weather_humidity = #{weatherHumidity},</if>
+            <if test="weatherPower != null">weather_power = #{weatherPower},</if>
+            <if test="weatherDirection != null">weather_direction = #{weatherDirection},</if>
+            <if test="weatherRise != null">weather_rise = #{weatherRise},</if>
+            <if test="weatherDown != null">weather_down = #{weatherDown},</if>
+            <if test="weatherAir != null">weather_air = #{weatherAir},</if>
+        </trim>
+        where weather_id = #{weatherId}
+    </update>
+
+    <delete id="deleteInformationWeatherByWeatherId" parameterType="Long">
+        delete from information_weather where weather_id = #{weatherId}
+    </delete>
+
+    <delete id="deleteInformationWeatherByWeatherIds" parameterType="String">
+        delete from information_weather where weather_id in 
+        <foreach item="weatherId" collection="array" open="(" separator="," close=")">
+            #{weatherId}
+        </foreach>
+    </delete>
+</mapper>
